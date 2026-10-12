@@ -6,6 +6,8 @@
 
 **Team ID:** A3-PS013-TC015
 
+**Team Name:** Arise
+
 **Team Members:**
 - Barath C G
 - Sri Ramanarayana S N
