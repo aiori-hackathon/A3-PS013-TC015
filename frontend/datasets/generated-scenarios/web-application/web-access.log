@@ -1,0 +1,6 @@
+203.0.113.42 - - [22/Oct/2026:12:00:00 +0000] "GET / HTTP/1.1" 200 900 "-" "SYNTHETIC TracepointDemo/1.0"
+203.0.113.42 - - [22/Oct/2026:12:03:00 +0000] "GET /../../etc/passwd HTTP/1.1" 400 901 "-" "SYNTHETIC TracepointDemo/1.0"
+203.0.113.42 - - [22/Oct/2026:12:06:00 +0000] "GET /search?q=%27%20UNION%20SELECT%20password HTTP/1.1" 403 902 "-" "SYNTHETIC TracepointDemo/1.0"
+203.0.113.42 - - [22/Oct/2026:12:09:00 +0000] "GET /login HTTP/1.1" 401 903 "-" "SYNTHETIC TracepointDemo/1.0"
+203.0.113.42 - - [22/Oct/2026:12:12:00 +0000] "GET /admin/export HTTP/1.1" 200 904 "-" "SYNTHETIC TracepointDemo/1.0"
+NOT_A_WEB_ACCESS_LINE -- SYNTHETIC GAP

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Tracepoint</title>
+  <desc id="desc">Incident timeline and evidence collection for small teams</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071526"/>
+      <stop offset="1" stop-color="#102c42"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2dd4bf"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" rx="24" fill="url(#bg)"/>
+  <path d="M0 244h1200" stroke="#244258" stroke-width="1"/>
+  <g fill="none" stroke="url(#line)" stroke-width="4" opacity=".82">
+    <path d="M695 75h82l34 36h78l36-36h154"/>
+    <path d="M695 150h120l28-28h83l26 28h127"/>
+    <path d="M695 225h62l32-35h111l36 35h143"/>
+  </g>
+  <g fill="#0c1e30" stroke="#42d8cb" stroke-width="4">
+    <circle cx="695" cy="75" r="8"/><circle cx="811" cy="111" r="8"/><circle cx="925" cy="75" r="8"/><circle cx="1073" cy="75" r="8"/>
+    <circle cx="695" cy="150" r="8"/><circle cx="843" cy="122" r="8"/><circle cx="926" cy="150" r="8"/><circle cx="1079" cy="150" r="8"/>
+    <circle cx="695" cy="225" r="8"/><circle cx="789" cy="190" r="8"/><circle cx="900" cy="190" r="8"/><circle cx="1080" cy="225" r="8"/>
+  </g>
+  <g transform="translate(70 69)">
+    <rect width="74" height="74" rx="20" fill="#19b9ad"/>
+    <path d="M37 14 57 22v15c0 14-8 24-20 31-12-7-20-17-20-31V22z" fill="none" stroke="#052136" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M29 38h16M37 30v16" stroke="#052136" stroke-width="4" stroke-linecap="round"/>
+    <text x="0" y="125" fill="#f1f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="1">TRACEPOINT</text>
+    <text x="2" y="162" fill="#a9c2d4" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="2">INCIDENT TIMELINE  ·  EVIDENCE WORKBENCH</text>
+    <text x="2" y="199" fill="#5eead4" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="1.5">AIORI HACKATHON 3  /  PS-013</text>
+  </g>
+  <text x="70" y="278" fill="#88a6bb" font-family="Segoe UI, Arial, sans-serif" font-size="12" letter-spacing="1.2">LOCAL-FIRST INVESTIGATION WORKSPACE FOR SMALL TEAMS</text>
+</svg>

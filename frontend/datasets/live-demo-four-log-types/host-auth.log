@@ -1,0 +1,10 @@
+Oct 17 09:00:14 web-01 sshd[4101]: Failed password for invalid user admin from 203.0.113.77 port 51220 ssh2
+Oct 17 09:02:09 web-01 sshd[4108]: Failed password for root from 203.0.113.77 port 51221 ssh2
+Oct 18 10:14:22 web-01 sshd[4320]: Failed password for deploy from 203.0.113.77 port 51990 ssh2
+Oct 18 10:15:03 web-01 sshd[4323]: Failed password for ops from 203.0.113.77 port 51995 ssh2
+Oct 19 11:04:18 web-01 sshd[4811]: Accepted password for deploy from 203.0.113.77 port 52031 ssh2
+Oct 19 11:07:42 web-01 sudo[4839]: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Oct 20 08:20:11 web-01 sshd[5012]: Accepted publickey for deploy from 203.0.113.77 port 52300 ssh2
+Oct 20 08:32:55 web-01 sudo[5060]: deploy : TTY=pts/1 ; PWD=/srv/app ; USER=root ; COMMAND=/usr/bin/tar -czf /tmp/site-data.tgz /srv/app/data
+Oct 21 13:01:04 web-01 sshd[5401]: Failed password for deploy from 203.0.113.77 port 52910 ssh2
+Oct 21 13:05:37 web-01 sshd[5410]: Accepted publickey for deploy from 10.0.1.24 port 52918 ssh2

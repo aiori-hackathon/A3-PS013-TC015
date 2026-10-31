@@ -1,0 +1,4 @@
+timestamp,event,user,source_ip,level,host
+2026-10-22T12:00:00+00:00,SYNTHETIC firewall allow, ops,203.0.113.42,INFO,edge-01
+2026-10-22T12:15:00+00:00,SYNTHETIC SSH session correlated,ops,203.0.113.42,WARN,edge-01
+not-a-time,missing-time example,ops,203.0.113.8,INFO,edge-01

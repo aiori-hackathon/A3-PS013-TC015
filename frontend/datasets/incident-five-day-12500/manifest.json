@@ -1,0 +1,14 @@
+{
+  "name": "Synthetic five-day incident dataset",
+  "start_date_utc": "2026-10-17",
+  "end_date_utc": "2026-10-21",
+  "total_events": 12500,
+  "counts": {
+    "host-auth.log": 2500,
+    "web-access.log": 3500,
+    "application-events.jsonl": 4000,
+    "firewall-network.log": 2500
+  },
+  "synthetic": true,
+  "seed": 5017
+}

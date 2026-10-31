@@ -1,0 +1,10 @@
+2026-10-17T09:01:30Z edge-fw-01 action=DENY src=203.0.113.77 dst=10.0.1.10 proto=TCP dport=22 reason=scan-policy
+2026-10-17T09:02:30Z edge-fw-01 action=DENY src=203.0.113.77 dst=10.0.1.10 proto=TCP dport=22 reason=rate-limit
+2026-10-18T10:12:40Z edge-fw-01 action=DENY src=203.0.113.77 dst=10.0.1.20 proto=TCP dport=443 reason=restricted-admin-route
+2026-10-18T10:16:30Z edge-fw-01 action=DENY src=203.0.113.77 dst=10.0.1.10 proto=TCP dport=22 reason=auth-throttle
+2026-10-19T11:03:55Z edge-fw-01 action=ALLOW src=203.0.113.77 dst=10.0.1.10 proto=TCP dport=22 reason=remote-access-rule
+2026-10-19T11:07:55Z edge-fw-01 action=ALLOW src=203.0.113.77 dst=10.0.1.20 proto=TCP dport=443 reason=web-application-rule
+2026-10-20T08:32:10Z edge-fw-01 action=ALLOW src=10.0.1.10 dst=198.51.100.44 proto=TCP dport=443 reason=egress-https
+2026-10-20T08:34:40Z edge-fw-01 action=DENY src=10.0.1.10 dst=198.51.100.44 proto=TCP dport=443 reason=egress-alert
+2026-10-21T13:03:01Z edge-fw-01 action=DENY src=203.0.113.77 dst=10.0.1.10 proto=TCP dport=22 reason=account-disabled
+2026-10-21T13:06:22Z edge-fw-01 action=ALLOW src=10.0.1.24 dst=10.0.1.10 proto=TCP dport=22 reason=admin-response

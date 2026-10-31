@@ -1,0 +1,5 @@
+{"timestamp": "2026-10-22T17:36:00+05:30", "host": "webapp-01", "level": "WARN", "event": "SYNTHETIC authentication failed", "username": "ops", "client_ip": "203.0.113.42", "synthetic": true}
+{"timestamp": "2026-10-22T17:39:00+05:30", "host": "webapp-01", "level": "WARN", "event": "SYNTHETIC authentication failed", "username": "ops", "client_ip": "203.0.113.42", "synthetic": true}
+{"timestamp": "2026-10-22T17:42:00+05:30", "host": "webapp-01", "level": "ERROR", "event": "SYNTHETIC login accepted", "username": "ops", "client_ip": "203.0.113.42", "synthetic": true}
+{"timestamp": "2026-10-22T17:45:00+05:30", "host": "webapp-01", "level": "ERROR", "event": "SYNTHETIC export requested", "username": "ops", "client_ip": "203.0.113.42", "synthetic": true}
+{"timestamp":"not-a-time","event":"SYNTHETIC missing timestamp"}

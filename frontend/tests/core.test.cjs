@@ -1,0 +1,23 @@
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const { webcrypto } = require('node:crypto');
+const app = fs.readFileSync(path.join(__dirname, '..', 'app.js'), 'latin1');
+function section(from, to) { const start = app.indexOf(from), end = app.indexOf(to, start + from.length); assert.ok(start >= 0 && end > start, `missing ${from}`); return app.slice(start, end); }
+const source = [section('const severity=', 'function parseAuth('), section('function parseAuth(', 'function parseApache('), section('function parseApache(', 'function parseApplication('), section('function parseApplication(', 'function parseFirewall('), section('function parseFirewall(', 'function detectFormat('), section('function detectFormat(', 'function parseRecord('), section('function parseCSV(', 'function parseRecord('), section('function parseRecord(', 'function toEpoch('), section('function toEpoch(', 'async function digestBytes('), section('async function digestBytes(', 'async function addFile(')].join('\n') + '\nglobalThis.__severity = severity;';
+const context = vm.createContext({ crypto: webcrypto, TextEncoder, Date, Intl, JSON, Math, String, Number, RegExp, Error, isNaN, console });
+vm.runInContext(source, context);
+const call = (name, ...args) => context[name](...args);
+test('CSV supports quoted commas and escaped quotes', () => { const x=call('parseCSV', `timestamp,event,user\n2026-10-22T10:00:00Z,"export, requested","a""b"`); assert.equal(x[0].obj.event,'export, requested'); assert.equal(x[0].obj.user,'a"b'); });
+test('CSV rejects unclosed quoted fields', () => assert.throws(() => call('parseCSV', `timestamp,event\n2026-10-22T00:00:00Z,"broken`)));
+test('CSV event extracts timestamp, user and IP; rejects missing timestamp', () => { const x=call('parseCSVEvent',{timestamp:'2026-10-22T10:00:00Z',event:'login',username:'ops',source_ip:'203.0.113.9'}); assert.equal(x.date.toISOString(),'2026-10-22T10:00:00.000Z'); assert.equal(x.user,'ops'); assert.equal(x.sourceIP,'203.0.113.9'); assert.equal(call('parseCSVEvent',{event:'missing'}),null); });
+test('Linux auth parser reads supported records and rejects malformed lines', () => { const x=call('parseAuth','Oct 22 08:14:02 host sshd[1]: Failed password for ops from 203.0.113.9 port 22 ssh2'); assert.equal(x.host,'host'); assert.equal(call('parseRecord','bad','auth'),null); });
+test('Apache parser honors embedded timezone offsets', () => { const x=call('parseApache','203.0.113.9 - - [22/Oct/2026:15:00:00 +0530] "GET / HTTP/1.1" 200 12'); assert.equal(x.date.toISOString(),'2026-10-22T09:30:00.000Z'); });
+test('JSON parser reads event fields and rejects missing timestamps', () => { assert.match(call('parseApplication','{"timestamp":"2026-10-22T10:00:00Z","event":"login"}').message,/login/); assert.equal(call('parseApplication','{"event":"no time"}'),null); });
+test('Firewall parser extracts timestamp and key/value fields', () => { const x=call('parseFirewall','2026-10-22T10:00:00Z edge action=DENY src=203.0.113.9 dst=10.0.0.1 dport=22'); assert.match(x.message,/DENY/); assert.match(x.message,/203.0.113.9/); });
+test('format detection recognizes CSV and JSONL', () => { assert.equal(call('detectFormat',['timestamp,event,user']),'csv'); assert.equal(call('detectFormat',['{"timestamp":"2026-10-22T00:00:00Z"}']),'application'); });
+test('UTC normalization applies a clock correction', () => { const d=new Date('2026-10-22T12:00:00Z'); assert.equal(call('toEpoch',d,'UTC',60),d.getTime()-3600000); });
+test('SHA-256 hashes exact evidence bytes and detects changed bytes', async () => { const bytes=new TextEncoder().encode('synthetic evidence'), hash=await call('digestBytes',bytes); assert.equal(hash,'48736e58b409ed0241c8d7bed9dc188a59e13002f48e7492850bec15b59147b6'); assert.notEqual(await call('digestBytes',new TextEncoder().encode('changed')),hash); });
+test('severity levels remain heuristic categories', () => { assert.equal(call('__severity',{message:'Accepted password',original:''}),'high'); assert.equal(call('__severity',{message:'Failed password',original:''}),'medium'); });

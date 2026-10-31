@@ -1,0 +1,15 @@
+{
+  "scenario_id": "network-activity",
+  "name": "Suspicious network activity",
+  "description": "Denied connection attempts and related host/network observations.",
+  "seed": 13013,
+  "label": "SYNTHETIC DATA \u2014 NOT A REAL INCIDENT",
+  "generated_at": "2026-10-30T04:16:56.950813+00:00",
+  "metadata": {
+    "source_ip": "203.0.113.42",
+    "username": "ops",
+    "clock_skew_included": true,
+    "timezone_variation_included": true,
+    "malformed_or_missing_timestamps_included": true
+  }
+}

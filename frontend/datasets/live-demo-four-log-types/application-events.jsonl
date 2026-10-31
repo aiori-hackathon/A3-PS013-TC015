@@ -1,0 +1,10 @@
+{"timestamp":"2026-10-17T09:00:25Z","host":"portal-01","level":"INFO","event":"Home page request served","source_ip":"203.0.113.77","user_agent":"Mozilla/5.0"}
+{"timestamp":"2026-10-17T09:02:13Z","host":"portal-01","level":"WARN","event":"Repeated authentication failures detected","source_ip":"203.0.113.77","count":5}
+{"timestamp":"2026-10-18T10:15:11Z","host":"identity-01","level":"WARN","event":"Account deploy temporarily rate-limited","user":"deploy","source_ip":"203.0.113.77"}
+{"timestamp":"2026-10-18T10:16:02Z","host":"identity-01","level":"INFO","event":"Rate limit expired","user":"deploy","source_ip":"203.0.113.77"}
+{"timestamp":"2026-10-19T11:04:31Z","host":"identity-01","level":"INFO","event":"Interactive login succeeded","user":"deploy","source_ip":"203.0.113.77"}
+{"timestamp":"2026-10-19T11:06:10Z","host":"portal-01","level":"WARN","event":"Admin page accessed by deploy","user":"deploy","source_ip":"203.0.113.77"}
+{"timestamp":"2026-10-20T08:31:50Z","host":"api-01","level":"WARN","event":"Bulk export requested","user":"deploy","source_ip":"203.0.113.77","records":12000}
+{"timestamp":"2026-10-20T08:34:14Z","host":"api-01","level":"ERROR","event":"Unusual archive download volume","user":"deploy","source_ip":"203.0.113.77","bytes":224901}
+{"timestamp":"2026-10-21T13:02:19Z","host":"identity-01","level":"WARN","event":"Authentication failure after credential reset","user":"deploy","source_ip":"203.0.113.77"}
+{"timestamp":"2026-10-21T13:06:01Z","host":"identity-01","level":"INFO","event":"Session closed","user":"deploy","source_ip":"10.0.1.24"}
