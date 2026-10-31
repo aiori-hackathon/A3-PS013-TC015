@@ -113,6 +113,8 @@ The default walkthrough seed, `13013`, makes generated content repeatable. It is
 
 ### Watch the demo
 
+https://github.com/aiori-hackathon/A3-PS013-TC015/blob/main/docs/demo/Tracepoint-Demo.mp4
+
 
 
 
