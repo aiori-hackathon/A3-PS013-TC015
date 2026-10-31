@@ -16,7 +16,7 @@
 
 Tracepoint helps a small security team reconstruct an incident from scattered host, application, web, and network logs. It preserves uploaded originals, records SHA-256 digests, normalizes supported timestamps to UTC, and turns parseable records into a searchable timeline. Analysts can review parsing gaps, document an investigation, and export a report.
 
-
+> **Scope:** Tracepoint is a local-first investigation workbench for authorized logs. It is not a SIEM, live endpoint agent, automated threat verdict, or forensic certification product. Findings are rule-based review cues; analysts must validate them against the original records.
 
 ## At a glance
 
@@ -113,7 +113,7 @@ The default walkthrough seed, `13013`, makes generated content repeatable. It is
 
 ## Team demo
 
-**Demo video:** _Add the demonstration video URL here._
+**Demo video:** [Watch the Tracepoint demonstration](docs/demo/Tracepoint-Demo.mp4)
 
 ## Architecture
 
