@@ -9,13 +9,14 @@
 <p align="center">
   <a href="#quick-start">Quick start</a> ·
   <a href="#analyst-workflow">Analyst workflow</a> ·
+  <a href="#team-demo">Team demo</a> ·
   <a href="#architecture">Architecture</a> ·
   <a href="#security-and-limitations">Security and limitations</a>
 </p>
 
 Tracepoint helps a small security team reconstruct an incident from scattered host, application, web, and network logs. It preserves uploaded originals, records SHA-256 digests, normalizes supported timestamps to UTC, and turns parseable records into a searchable timeline. Analysts can review parsing gaps, document an investigation, and export a report.
 
-> **Scope:** Tracepoint is a local-first investigation workbench for authorized logs. It is not a SIEM, live endpoint agent, automated threat verdict, or forensic certification product. Findings are rule-based review cues; analysts must validate them against the original records.
+
 
 ## At a glance
 
@@ -110,6 +111,10 @@ Use these to exercise the workflow without presenting generated data as real ser
 
 The default walkthrough seed, `13013`, makes generated content repeatable. It is a deterministic generator input, not an attack ID, server identifier, or security score. Rule-based findings are prompts for review, not confirmed attack conclusions.
 
+## Team demo
+
+**Demo video:** _Add the demonstration video URL here._
+
 ## Architecture
 
 ```mermaid
@@ -172,4 +177,6 @@ The browser app and API use the same local server origin. Useful routes include:
 
 [Watch the AIORI-3 team introduction and proposed solution](https://youtu.be/25TkC0Pfvg0) · Project presentation: `AIORI3_A3-PS013-TC015_Presentation.pdf`.
 
+## License
 
+No license has been added yet. Contact the team before reusing or redistributing this project.
