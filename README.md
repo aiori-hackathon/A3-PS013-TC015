@@ -177,6 +177,4 @@ The browser app and API use the same local server origin. Useful routes include:
 
 [Watch the AIORI-3 team introduction and proposed solution](https://youtu.be/25TkC0Pfvg0) · Project presentation: `AIORI3_A3-PS013-TC015_Presentation.pdf`.
 
-## License
 
-No license has been added yet. Contact the team before reusing or redistributing this project.
