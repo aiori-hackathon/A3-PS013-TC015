@@ -114,7 +114,8 @@ The default walkthrough seed, `13013`, makes generated content repeatable. It is
 ### Watch the demo
 
 
-https://github.com/user-attachments/assets/32ce6e62-e5f6-45f2-a021-0e2279e4b2c8
+
+
 
 
 
