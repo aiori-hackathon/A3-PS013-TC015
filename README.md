@@ -111,9 +111,12 @@ Use these to exercise the workflow without presenting generated data as real ser
 
 The default walkthrough seed, `13013`, makes generated content repeatable. It is a deterministic generator input, not an attack ID, server identifier, or security score. Rule-based findings are prompts for review, not confirmed attack conclusions.
 
-## Team demo
+### Watch the demo
 
-**Demo video:** [Watch the Tracepoint demonstration](docs/demo/Tracepoint-Demo.mp4)
+
+https://github.com/user-attachments/assets/32ce6e62-e5f6-45f2-a021-0e2279e4b2c8
+
+
 
 ## Architecture
 
